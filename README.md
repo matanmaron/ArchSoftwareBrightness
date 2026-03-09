@@ -14,6 +14,14 @@ sudo pacman -S python-pyqt6 brightnessctl xorg-xrandr
 ## Installation & Autostart
 MAKE SURE THE SCREEN NAME IS SET CORRECTLY IN DISPLAY_NAME !
 
+You have to explicitly hand the script over to KDE's native startup manager. Here is exactly how you make KDE run the daemon for you on every boot:
+
+- Open KDE System Settings.
+- Search for Autostart (usually under "Startup and Shutdown").
+- Click the Add... button and select Add Login Script... (or "Add Application" depending on your Plasma version).
+- Enter the absolute path to your Python interpreter and the script: python /home/YOUR_USERNAME/.local/bin/dual_brightness.py
+- Make sure the toggle is set to Enabled.
+
 ### 1. File Placement
 Open your terminal, create the directory if it doesn't exist, move the script, and make it executable:
 ```bash
